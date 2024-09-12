@@ -108,14 +108,12 @@
   flex: 2;
   margin-left: 2rem;
   position: relative;
-  /* background-color: red; */
 }
 
 form {
   position: absolute;
   min-width: 100%;
   min-height: 100%;
-  /* background-color: rebeccapurple; */
   display: flex;
   flex-direction: column;
 }
