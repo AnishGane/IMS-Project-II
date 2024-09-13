@@ -3,6 +3,7 @@
 :root {
   --login-bgcolor: #e0efff;
   --login-color: #0b1e33;
+  --text-color: #888;
 }
 
 * {
@@ -82,67 +83,29 @@ input[type="password"] {
 
 .custom-select {
   position: relative;
-  width: fit-content;
-  margin-top: 27px;
-  color: var(--login-color);
+  margin-top: 1.8rem;
 }
 
-.select-box {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f0f0f0;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-}
-
-.select-box span {
+.custom-select::after {
+  content: "▼"; /* Custom arrow symbol */
   font-size: 1rem;
-  padding-right: 10px;
-}
-
-.select-box svg {
-  width: 20px;
-  height: 20px;
-  fill: #333;
-  pointer-events: none;
-}
-
-.select-options {
+  color: #555;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevents arrow from blocking click */
+}
+
+select {
+  padding: 0.8rem;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  z-index: 5;
-}
-
-.option {
-  padding: 8px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-}
-
-.option:hover {
-  background-color: #f0f0f0;
-}
-
-.show {
-  max-height: 150px;
-  opacity: 1;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  appearance: none;
 }
 
 .login-btn {
@@ -151,13 +114,13 @@ input[type="password"] {
 }
 
 .login-btn button {
+  cursor: pointer;
   padding: 6px 41px;
   background: transparent;
   border: 2px solid var(--login-color);
   outline: none;
   font-size: 18px;
   color: var(--login-color);
-  cursor: pointer;
   border-radius: 7px;
   font-weight: 500;
   position: relative;
@@ -223,11 +186,6 @@ input[type="password"] {
   .custom-select {
     width: 100%;
     margin-top: 20px;
-  }
-
-  .select-box {
-    padding: 10px;
-    font-size: 0.9rem;
   }
 
   .login-btn {
