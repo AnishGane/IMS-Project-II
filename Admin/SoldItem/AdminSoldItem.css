@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #495057;
+  border-top: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  text-align: center;
+}
+
+tr:last-child td {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #e9ecef;
+  border-top: 2px solid #dee2e6;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.solditem-wrapper {
+  background-color: #f8f9fa;
+  width: 100%;
+  padding: 1rem 1.4rem 1.2rem;
+  margin-top: 1.6rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.solditem-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.solditem-top h3 {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+
+.solditem-top input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.solditem-top input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-left: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.solditem-top input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.solditem-top input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+.solditem-top .second-date {
+  margin-left: 1.2rem;
+}
+
+h3 span {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+.sales h3 img {
+  width: 2.7rem;
+  height: 2.7rem;
+}

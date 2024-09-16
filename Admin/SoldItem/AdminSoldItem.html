@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Inventory</title>
+    <title>Admin Sold Item</title>
 
-    <link rel="stylesheet" href="/adminRoot.css" />
     <link rel="stylesheet" href="/util.css" />
-    <link rel="stylesheet" href="AdminInv.css" />
+    <link rel="stylesheet" href="/adminRoot.css" />
+    <link rel="stylesheet" href="AdminSoldItem.css" />
   </head>
   <body>
     <!-- Side Bar start -->
@@ -29,10 +29,10 @@
                 />Dashboard</a
               >
             </li>
-            <li class="list-row active">
+            <li class="list-row">
               <a href="#"
                 ><img
-                  src="/Images/inventoryWhite.svg"
+                  src="/Images/inventory.svg"
                   alt="inventory logo"
                 />Inventory</a
               >
@@ -43,9 +43,9 @@
                 Item</a
               >
             </li>
-            <li class="list-row">
+            <li class="list-row active">
               <a href="#"
-                ><img src="/Images/dollor.svg" alt="sold item logo" />Sold
+                ><img src="/Images/dollorWhite.svg" alt="sold item logo" />Sold
                 Item</a
               >
             </li>
@@ -66,7 +66,7 @@
         <!-- heading of main content beside sidebar -->
         <div class="main-heading">
           <div class="main-heading-left">
-            <h1>Inventory</h1>
+            <h1>Sold Items</h1>
             <p>37 registered items</p>
           </div>
           <div class="main-heading-right">
@@ -77,33 +77,68 @@
         </div>
       </header>
 
-      <section class="search-section">
-        <div class="search-part">
-          <input type="text" placeholder="Search anything here..." />
-          <img src="/Images/magnify.svg" alt="search icon" />
-        </div>
-        <div class="name-section">
-          <img src="/Images/Manage.svg" alt="control icon" />
-          <input type="text" name="" id="" placeholder="Name" />
-        </div>
-        <div class="category">
-          <img src="/Images/filter.svg" alt="category filter icon" />
-          <select>
-            <option value="" class="selected-one" selected disabled>
-              Category
-            </option>
-            <option value="">Item 1</option>
-            <option value="">Item 2</option>
-            <option value="">Item 3</option>
-            <option value="">Item 4</option>
-          </select>
+      <!-- Sold items starts -->
+      <section>
+        <div class="solditem-wrapper">
+          <div class="solditem-top">
+            <h3>
+              <img src="/Images/dollor.svg" alt="sales" /><span>Sales</span>
+            </h3>
+            <input class="first-date" type="date" />
+            <input class="second-date" type="date" />
+          </div>
+          <table>
+            <tr>
+              <th>S.N.</th>
+              <th>Name</th>
+              <th>Rate</th>
+              <th>Qty.</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+
+            <!-- always put it in last of table -->
+            <tr class="total-sales">
+              <td></td>
+              <td></td>
+              <td>Total Sales</td>
+              <td>6</td>
+              <td>51066</td>
+            </tr>
+            <!--  -->
+          </table>
         </div>
       </section>
-
-      <section class="card-container"></section>
+      <!-- Sold items ends -->
     </div>
     <!-- main content ends -->
     <script src="/UpdateDate.js"></script>
-    <script src="AdminInv.js"></script>
   </body>
 </html>
