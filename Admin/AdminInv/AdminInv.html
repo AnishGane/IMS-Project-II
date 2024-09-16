@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Inventory</title>
+
+    <link rel="stylesheet" href="/adminRoot.css" />
+    <link rel="stylesheet" href="/util.css" />
+    <link rel="stylesheet" href="AdminInv.css" />
+  </head>
+  <body>
+    <!-- Side Bar start -->
+    <aside>
+      <nav>
+        <div class="logo">
+          <a href="#"
+            ><img src="/Images/MainLogo.svg" alt="main logo" loading="lazy"
+          /></a>
+        </div>
+        <!-- side Bar navigation list -->
+        <div class="nav-list">
+          <ul>
+            <li class="list-row">
+              <a href="#"
+                ><img
+                  src="/Images/Dashboard.svg"
+                  alt="dashboard logo"
+                />Dashboard</a
+              >
+            </li>
+            <li class="list-row active">
+              <a href="#"
+                ><img
+                  src="/Images/inventoryWhite.svg"
+                  alt="inventory logo"
+                />Inventory</a
+              >
+            </li>
+            <li class="list-row">
+              <a href="#"
+                ><img src="/Images/additem.svg" alt="add item logo" />Add
+                Item</a
+              >
+            </li>
+            <li class="list-row">
+              <a href="#"
+                ><img src="/Images/dollor.svg" alt="sold item logo" />Sold
+                Item</a
+              >
+            </li>
+          </ul>
+          <div class="logout">
+            <a href="#"
+              ><img src="/Images/logout.svg" alt="log out" />Log Out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </aside>
+    <!-- Side Bar end -->
+
+    <!-- main content starts -->
+    <div class="wrapper">
+      <header>
+        <!-- heading of main content beside sidebar -->
+        <div class="main-heading">
+          <div class="main-heading-left">
+            <h1>Inventory</h1>
+            <p>37 registered items</p>
+          </div>
+          <div class="main-heading-right">
+            <!-- display that it is admin -->
+            <span class="staff">Admin</span>
+            <p id="display-date"></p>
+          </div>
+        </div>
+      </header>
+
+      <section class="search-section">
+        <div class="search-part">
+          <input type="text" placeholder="Search anything here..." />
+          <img src="/Images/magnify.svg" alt="search icon" />
+        </div>
+        <div class="name-section">
+          <img src="/Images/Manage.svg" alt="control icon" />
+          <input type="text" name="" id="" placeholder="Name" />
+        </div>
+        <div class="category">
+          <img src="/Images/filter.svg" alt="category filter icon" />
+          <select>
+            <option value="" class="selected-one" selected disabled>
+              Category
+            </option>
+            <option value="">Item 1</option>
+            <option value="">Item 2</option>
+            <option value="">Item 3</option>
+            <option value="">Item 4</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="card-container"></section>
+    </div>
+    <!-- main content ends -->
+    <script>
+      // Update the date and time in every heading of the pages
+      function updateDate() {
+        const now = new Date();
+        // Format the date
+        const formattedDate = now.toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+        // Format the time
+        const formattedTime = now.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        });
+        const fullDate = `${formattedDate}, ${formattedTime}`;
+
+        const display = document.getElementById("display-date");
+        display.textContent = fullDate;
+      }
+      updateDate();
+      // Update the date every minute
+      setInterval(updateDate, 60000);
+    </script>
+
+    <script src="AdminInv.js"></script>
+  </body>
+</html>

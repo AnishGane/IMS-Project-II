@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- links -->
+
     <link rel="stylesheet" href="/adminRoot.css" />
     <link rel="stylesheet" href="/util.css" />
+    <link rel="stylesheet" href="dashboard.css" />
   </head>
   <body>
     <!-- Side Bar start -->
@@ -13,16 +16,16 @@
       <nav>
         <div class="logo">
           <a href="#"
-            ><img src="/Images/mainlogo.png" alt="main logo" loading="lazy"
+            ><img src="/Images/MainLogo.svg" alt="main logo" loading="lazy"
           /></a>
         </div>
         <!-- side Bar navigation list -->
         <div class="nav-list">
           <ul>
-            <li class="list-row">
+            <li class="list-row active">
               <a href="#"
                 ><img
-                  src="/Images/dashboard.png"
+                  src="/Images/DashboardWhite.svg"
                   alt="dashboard logo"
                 />Dashboard</a
               >
@@ -30,32 +33,332 @@
             <li class="list-row">
               <a href="#"
                 ><img
-                  src="/Images/inventory.png"
+                  src="/Images/inventory.svg"
                   alt="inventory logo"
                 />Inventory</a
               >
             </li>
             <li class="list-row">
               <a href="#"
-                ><img src="/Images/additem.png" alt="add item logo" />Add
+                ><img src="/Images/additem.svg" alt="add item logo" />Add
                 Item</a
               >
             </li>
             <li class="list-row">
               <a href="#"
-                ><img src="/Images/dollor.png" alt="sold item logo" />Sold
+                ><img src="/Images/dollor.svg" alt="sold item logo" />Sold
                 Item</a
               >
             </li>
           </ul>
           <div class="logout">
             <a href="#"
-              ><img src="/Images/logout.png" alt="log out" />Log Out</a
+              ><img src="/Images/logout.svg" alt="log out" />Log Out</a
             >
           </div>
         </div>
       </nav>
     </aside>
     <!-- Side Bar end -->
+
+    <div class="wrapper">
+      <header>
+        <!-- heading of main content beside sidebar -->
+        <div class="main-heading">
+          <div class="main-heading-left">
+            <h1>Dashboard</h1>
+            <p>37 items registered</p>
+          </div>
+          <div class="main-heading-right">
+            <!-- display that it is admin -->
+            <span class="staff">Admin</span>
+            <p id="display-date"></p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Items details starts -->
+      <div class="overview-block">
+        <div class="overview-item">
+          <div class="overview-details">
+            <img src="/Images/inventory.svg" alt="" />
+            <span class="overview-label">Items</span>
+            <span class="overview-value">53</span>
+          </div>
+        </div>
+        <div class="overview-separator"></div>
+        <div class="overview-item">
+          <div class="overview-details">
+            <img src="/Images/import.svg" alt="" />
+            <span class="overview-label">Requests</span>
+            <span class="overview-value">52</span>
+          </div>
+        </div>
+        <div class="overview-separator"></div>
+        <div class="overview-item">
+          <div class="overview-details">
+            <img src="/Images/dollor.svg" alt="" />
+            <span class="overview-label">Sales</span>
+            <span class="overview-value">Rs. 5090</span>
+          </div>
+        </div>
+      </div>
+      <!-- Items details ends -->
+
+      <!-- Items Request Starts -->
+      <div class="itemrequest-wrapper">
+        <div class="itemrequest">
+          <h3>
+            <img src="/Images/import.svg" alt="" /><span>Item Requests</span>
+          </h3>
+          <table>
+            <tr>
+              <th>S.N.</th>
+              <th>Name</th>
+              <th>Available Qty.</th>
+              <th>Qty.</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>23</td>
+              <td>
+                <button class="qty-ctrl-btn minus-btn" data-action="-">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="old-qty"
+                  class="qty-ctrl-inp"
+                  value=""
+                  placeholder="1"
+                />
+                <button class="qty-ctrl-btn plus-btn" data-action="+">+</button>
+              </td>
+              <td>
+                <form method="" action="">
+                  <button type="submit" name="add-id" value="" class="add-btn">
+                    <img src="/Images/importWhite.svg" alt="" />
+                    ADD
+                  </button>
+                  <input
+                    type="number"
+                    name="qty"
+                    id="new-qty"
+                    value=""
+                    hidden
+                  />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>23</td>
+              <td>
+                <button class="qty-ctrl-btn minus-btn" data-action="-">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="old-qty"
+                  class="qty-ctrl-inp"
+                  value=""
+                  placeholder="1"
+                />
+                <button class="qty-ctrl-btn plus-btn" data-action="+">+</button>
+              </td>
+              <td>
+                <form method="" action="">
+                  <button type="submit" name="add-id" value="" class="add-btn">
+                    <img src="/Images/importWhite.svg" alt="" />
+                    ADD
+                  </button>
+                  <input
+                    type="number"
+                    name="qty"
+                    id="new-qty"
+                    value=""
+                    hidden
+                  />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>23</td>
+              <td>
+                <button class="qty-ctrl-btn minus-btn" data-action="-">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="old-qty"
+                  class="qty-ctrl-inp"
+                  value=""
+                  placeholder="1"
+                />
+                <button class="qty-ctrl-btn plus-btn" data-action="+">+</button>
+              </td>
+              <td>
+                <form method="" action="">
+                  <button type="submit" name="add-id" value="" class="add-btn">
+                    <img src="/Images/importWhite.svg" alt="" />
+                    ADD
+                  </button>
+                  <input
+                    type="number"
+                    name="qty"
+                    id="new-qty"
+                    value=""
+                    hidden
+                  />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>23</td>
+              <td>
+                <button class="qty-ctrl-btn minus-btn" data-action="-">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="old-qty"
+                  class="qty-ctrl-inp"
+                  value=""
+                  placeholder="1"
+                />
+                <button class="qty-ctrl-btn plus-btn" data-action="+">+</button>
+              </td>
+              <td>
+                <form method="" action="">
+                  <button type="submit" name="add-id" value="" class="add-btn">
+                    <img src="/Images/importWhite.svg" alt="" />
+                    ADD
+                  </button>
+                  <input
+                    type="number"
+                    name="qty"
+                    id="new-qty"
+                    value=""
+                    hidden
+                  />
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>23</td>
+              <td>
+                <button class="qty-ctrl-btn minus-btn" data-action="-">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="old-qty"
+                  class="qty-ctrl-inp"
+                  value=""
+                  placeholder="1"
+                />
+                <button class="qty-ctrl-btn plus-btn" data-action="+">+</button>
+              </td>
+              <td>
+                <form method="" action="">
+                  <button type="submit" name="add-id" value="" class="add-btn">
+                    <img src="/Images/importWhite.svg" alt="" />
+                    ADD
+                  </button>
+                  <input
+                    type="number"
+                    name="qty"
+                    id="new-qty"
+                    value=""
+                    hidden
+                  />
+                </form>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- Items Request ends -->
+
+      <div class="sales-wrapper">
+        <div class="sales">
+          <h3>
+            <img src="/Images/dollor.svg" alt="sales" /><span>Sales</span>
+          </h3>
+          <table>
+            <tr>
+              <th>S.N.</th>
+              <th>Name</th>
+              <th>Rate</th>
+              <th>Qty.</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Lorem ipsum, dolor sit amet</td>
+              <td>1099</td>
+              <td>1</td>
+              <td>1099</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Update the date and time in every heading of the pages
+      function updateDate() {
+        const now = new Date();
+        // Format the date
+        const formattedDate = now.toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+        // Format the time
+        const formattedTime = now.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        });
+        const fullDate = `${formattedDate}, ${formattedTime}`;
+
+        const display = document.getElementById("display-date");
+        display.textContent = fullDate;
+      }
+      updateDate();
+      // Update the date every minute
+      setInterval(updateDate, 60000);
+    </script>
   </body>
 </html>

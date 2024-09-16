@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Item</title>
-
-    <link rel="stylesheet" href="/util.css" />
-    <link rel="stylesheet" href="/adminRoot.css" />
+    <title>Admin Add Item</title>
     <link rel="stylesheet" href="AddItem.css" />
+    <link rel="stylesheet" href="/adminRoot.css" />
+    <link rel="stylesheet" href="/util.css" />
   </head>
   <body>
     <!-- Side Bar start -->
@@ -24,7 +23,7 @@
             <li class="list-row active">
               <a href="#"
                 ><img
-                  src="/Images/Dashboard.svg"
+                  src="Images/Dashboard.svg"
                   alt="dashboard logo"
                 />Dashboard</a
               >
@@ -77,8 +76,8 @@
         </div>
       </header>
 
-      <section>
-        <div class="additem-container">
+      <section class="additem-container">
+        <form action="">
           <div class="additem-left">
             <div class="additem-left-heading">
               <img src="/Images/inventory.svg" alt="inv item" />
@@ -104,55 +103,90 @@
               </div>
             </div>
           </div>
-          <div class="additem-right">
-            <form action="">
-              <div class="additem-title">
-              <label for="">Title:</label>
-              <input required type="text" placeholder="Title..." name="" id="">
-            </div>
+          <d class="additem-right">
+            <label class="additem-title" for="title" id="title">
+              Title:
+              <input
+                type="text"
+                name=""
+                id="title"
+                placeholder="Title..."
+                required
+              />
+            </label>
+
             <div class="additem-pq">
-              <label for="" >Price:</label>
-              <input required type="number" class="priceinput" placeholder="Price..." name="" id="">
-              <label for="">Quantity:</label>
-              <input required class="qinput" type="number" placeholder="Quantity..." name="" id=""> 
+              <label for="" class="price"
+                >Price:
+                <input
+                  required
+                  type="number"
+                  placeholder="Price..."
+                  name=""
+                  id=""
+                />
+              </label>
+              <label for="" class="quantity"
+                >Quantity:
+                <input
+                  required
+                  type="number"
+                  placeholder="Quantity..."
+                  name=""
+                  id=""
+                />
+              </label>
             </div>
 
-            <div class="additem-tag-category">
-              <div class="dropdown-container">
-                <select class="styled-select" required>
-                  <option value="" disabled selected>Tag</option>
-                  <option value="1">Tag 1</option>
-                  <option value="2">Tag 2</option>
-                  <option value="3">Tag 3</option>
-                </select>
+            <div class="dropdown-container">
+              <select class="styled-select" required>
+                <option value="" disabled selected>Tag</option>
+                <option value="1">Tag 1</option>
+                <option value="2">Tag 2</option>
+                <option value="3">Tag 3</option>
+              </select>
 
-                <select class="styled-select" required>
-                  <option value="" disabled selected>Category</option>
-                  <option value="1">Category 1</option>
-                  <option value="2">Category 2</option>
-                  <option value="3">Category 3</option>
-                </select>
-              </div>
+              <select class="styled-select" required>
+                <option value="" disabled selected>Category</option>
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+              </select>
             </div>
-            <div class="additem-location">
-              <label for="">Location:</label>
-              <input required type="text" placeholder="Location..." name="" id="">
-            </div>
-            <div class="additem-description">
-              <label for="">Description:</label>
-              <textarea required name="" placeholder="Description" id=""></textarea>
-            </div>
+
+            <label class="additem-location" for="location"
+              >Location:
+              <input
+                type="text"
+                name=""
+                id="location"
+                placeholder="Location..."
+                required
+              />
+            </label>
+
+            <label for="description" class="additem-description"
+              >Description:
+              <textarea
+                type="text"
+                name=""
+                id="description"
+                placeholder="Description..."
+                required
+              ></textarea>
+            </label>
 
             <div class="additem-cta">
-              <button class="add-btn"><img src="/Images/additem.svg" alt="add">Add to Inventory</button>
-              <button class="cancel-btn">Cancel</button>
+              <button class="add-btn">
+                <img src="/Images/additem.svg" alt="add" />Add to Inventory
+              </button>
+              <button class="cancel">Cancel</button>
             </div>
-            </form>
-          </div>
-          </div>
-        </div>
+          </d>
+        </form>
       </section>
     </div>
+
     <!-- main content ends -->
 
     <script>
