@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Panel</title>
+
+    <link rel="stylesheet" href="/util.css" />
+    <link rel="stylesheet" href="/adminRoot.css" />
+    <link rel="stylesheet" href="ControlPanel.css" />
+  </head>
+  <body>
+    <!-- Side Bar start -->
+    <aside>
+      <nav>
+        <div class="logo">
+          <a href="#"
+            ><img src="/Images/MainLogo.svg" alt="main logo" loading="lazy"
+          /></a>
+        </div>
+        <!-- side Bar navigation list -->
+        <div class="nav-list">
+          <ul>
+            <li class="list-row">
+              <a href="#"
+                ><img
+                  src="/Images/Dashboard.svg"
+                  alt="dashboard logo"
+                />Dashboard</a
+              >
+            </li>
+            <li class="list-row">
+              <a href="#"
+                ><img
+                  src="/Images/inventory.svg"
+                  alt="inventory logo"
+                />Inventory</a
+              >
+            </li>
+            <li class="list-row">
+              <a href="#"
+                ><img src="/Images/additem.svg" alt="add item logo" />Add
+                Item</a
+              >
+            </li>
+            <li class="list-row">
+              <a href="#"
+                ><img src="/Images/dollor.svg" alt="sold item logo" />Sold
+                Item</a
+              >
+            </li>
+            <li class="list-row active">
+              <a href="#"
+                ><img
+                  src="/Images/ManageWhite.svg"
+                  alt="Control panel logo"
+                />Control Panel</a
+              >
+            </li>
+          </ul>
+          <div class="logout">
+            <a href="#"
+              ><img src="/Images/logout.svg" alt="log out" />Log Out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </aside>
+    <!-- Side Bar end -->
+
+    <div class="wrapper">
+      <header>
+        <!-- heading of main content beside sidebar -->
+        <div class="main-heading">
+          <div class="main-heading-left">
+            <h1>Control Panel</h1>
+            <p>1 Registered User</p>
+          </div>
+          <div class="main-heading-right">
+            <!-- display that it is admin -->
+            <span class="staff">Admin</span>
+            <p id="display-date"></p>
+          </div>
+        </div>
+      </header>
+
+      <!-- User and Add User section start -->
+      <section class="control-panel-wrapper">
+        <div class="user-category-section" id="user-section">
+          <h3><img src="/Images/user.svg" alt="user logo" />Users</h3>
+          <table>
+            <tr>
+              <th>User - ID</th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Anish</td>
+              <td>staff</td>
+              <td>
+                <form action="">
+                  <button type="submit">
+                    <img
+                      src="/Images/deleteWhite.svg"
+                      alt="delete logo"
+                    />Delete
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Aatish</td>
+              <td>Admin</td>
+              <td>
+                <form action="">
+                  <button type="submit">
+                    <img
+                      src="/Images/deleteWhite.svg"
+                      alt="delete logo"
+                    />Delete
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="add-section" id="add-user-section">
+          <h3><img src="/Images/adduser.svg" alt="add user logo" />Add User</h3>
+          <!-- form for adding starts-->
+          <form action="">
+            <label for="username">
+              <span>Username:</span>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                placeholder="username"
+              />
+            </label>
+            <label for="password">
+              <span>Password:</span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="password"
+              />
+            </label>
+            <button type="submit">
+              <img src="/Images/adduserWhite.svg" alt="add user logo" />Add User
+            </button>
+          </form>
+          <!-- form for adding ends-->
+        </div>
+      </section>
+      <!-- User and Add User section end-->
+
+      <!-- Category and Add Category section start -->
+      <section class="control-panel-wrapper">
+        <div class="user-category-section" id="category-section">
+          <h3><img src="/Images/user.svg" alt="user logo" />Users</h3>
+          <table>
+            <tr>
+              <th>User - ID</th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Anish</td>
+              <td>staff</td>
+              <td>
+                <form action="">
+                  <button type="submit">
+                    <img
+                      src="/Images/deleteWhite.svg"
+                      alt="delete logo"
+                    />Delete
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Aatish</td>
+              <td>Admin</td>
+              <td>
+                <form action="">
+                  <button type="submit">
+                    <img
+                      src="/Images/deleteWhite.svg"
+                      alt="delete logo"
+                    />Delete
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="add-section" id="add-user-section">
+          <h3>
+            <img src="/Images/Category.svg" alt="add category logo" />Add
+            Category
+          </h3>
+          <!-- form for adding starts-->
+          <form action="">
+            <button type="submit">
+              <img src="/Images/categoryWhite.svg" alt="add category logo" />Add
+              Category
+            </button>
+          </form>
+          <!-- form for adding ends-->
+        </div>
+      </section>
+      <!-- Category and Add Category section start -->
+    </div>
+
+    <script src="/UpdateDate.js"></script>
+  </body>
+</html>
